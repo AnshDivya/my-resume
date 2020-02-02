@@ -1,0 +1,130 @@
+.year-and-role {
+    width: 635px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.dot-and-vl-container {
+    padding: 30px 0 0;
+    display: inline-block;
+}
+.org-and-desc {
+    display: inline-block;
+    text-align: left;
+    padding-left: 40px;
+    padding-right: 150px;
+    width: 1900px;
+    border-left: 0.5px solid lightgray;
+    position: relative;
+    padding-bottom: 40px;
+    
+}
+
+.dot-and-vl {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: -3px;
+}
+
+.vl {
+    border-left: 0.5px solid lightgrey;
+    display: inline-block;
+    height: 500px;
+    width: 0.5px;
+    margin-left: 2px;
+}
+
+h2, h3, p{
+    margin: 0;
+}
+
+.timeline-container {
+    display: flex;
+}
+
+
+
+.movable-container {
+    position: relative;
+}
+
+h2 {
+    color: #182153;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 0.2em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #182153;
+    letter-spacing: 0.3em;
+    margin-bottom: 15px;    
+
+}
+
+p {
+    font-size: 13px;
+    letter-spacing: 0.1em;
+}
+
+.hr-top {
+    margin-bottom: 30px;
+}
+
+.leftToRight-appear {
+    opacity: 0.01;
+    position: relative;
+    left: -60px;
+  }
+  
+.leftToRight-appear.leftToRight-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: relative;
+    left: 0px;
+}
+
+.rightToLeft-appear {
+    opacity: 0.01;
+    position: relative;
+    left: 60px;
+  }
+  
+.rightToLeft-appear.rightToLeft-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: relative;
+    left: 0px;
+}
+
+.bottomToTop-appear {
+    opacity: 0.01;
+    position: absolute;
+    top: 30px;
+  }
+  
+.bottomToTop-appear.bottomToTop-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: absolute;
+    top: 0px;
+}

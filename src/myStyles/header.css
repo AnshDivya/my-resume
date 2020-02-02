@@ -1,0 +1,45 @@
+.header {
+    
+    position: sticky;
+    height: 100px;
+}
+
+.header-name-container {
+    
+    float: left;
+    width: 50%;
+    height: 100px;
+}
+
+.header h1 {
+    margin-left: 20px;
+    line-height: 65px;
+}
+
+.header-navigation-button-container {
+    height: 100px;
+    float: right;
+    width: 50%;
+}
+
+.navigator-button {
+    width: 20%;
+    float: left;
+    margin: auto;
+    line-height: 58px;
+}
+
+h4 {
+    margin-top: 20px;
+    color: #5b0891;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+h4:hover {
+    color: #1dd0ff;
+    cursor: pointer;
+    font-weight: lighter;
+    font-size: 15px;
+}

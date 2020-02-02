@@ -1,0 +1,31 @@
+.experience {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.experience h1 {
+    color: #182153;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.hr-bottom {
+    margin-bottom: 50px;
+}
+
+.example-appear {
+    opacity: 0.01;
+  }
+  
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 5s ease-in;
+  }
+
+  .example-appear {
+    opacity: 0.01;
+}
+  
+.example-appear.example-appear-active {
+   opacity: 1;
+   transition: opacity 5s ease-in;
+}

@@ -1,0 +1,18 @@
+.links-container {
+    background-color: #5b0891;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.slideDown-appear {
+    height: 0;
+    opacity: 0.01;
+}
+
+.slideDown-appear.slideDown-appear-active {
+    height: 24px;
+    opacity: 1;
+    transition: all 1s ease-in;
+    
+}

@@ -1,0 +1,12 @@
+.intro {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    
+}
+
+.intro-container {
+    position: absolute;
+    left: 200px;
+    top: 230px;
+}

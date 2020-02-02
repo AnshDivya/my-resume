@@ -1,0 +1,35 @@
+.personal-details {
+    width: 390px;
+    height: 390px;
+    padding-left: 80px;
+    padding-top: 80px;
+    background-color: whitesmoke;
+}
+
+.personal-details h1 {
+    margin: 5px 0;
+}
+
+.personal-details h2 {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 2px 0;
+    color: #182153;
+}
+
+.personal-details h3 {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 2px 0;
+    color: #5b0891;
+}
+
+.personal-details h4 {
+    font-size: 14px;
+    font-weight: lighter;
+    font-family: 'Ubuntu', sans-serif;
+    margin: 2px 0;
+    color: #182153;
+}
