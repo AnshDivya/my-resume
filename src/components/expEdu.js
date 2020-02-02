@@ -1,5 +1,5 @@
 import React from 'react';
-import '../myStyles/experience.css';
+import '../myStyles/expEdu.css';
 import TimeLine from './timeline';  
 class ExpEdu extends React.Component {
     

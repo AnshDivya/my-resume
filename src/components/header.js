@@ -11,8 +11,8 @@ function Header() {
             <div className = 'header-navigation-button-container'>
                 <NavigatorButton name = 'EXPERIENCE'/>
                 <NavigatorButton name = 'EDUCATION'/>
-                <NavigatorButton name = 'PROJECTS'/>
                 <NavigatorButton name = 'SKILLS'/>
+                <NavigatorButton name = 'PROJECTS'/>
                 <NavigatorButton name = 'CONTACT'/>
             </div>
         </div>

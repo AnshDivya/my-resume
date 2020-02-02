@@ -1,0 +1,26 @@
+.heading {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #182153;
+}
+
+.heading h1 {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.skill-container {
+    text-align: center;
+    background-color: #182153;
+}
+
+.skill {
+    width: 40%;
+    display: inline-block;
+    background-color: inherit;
+    margin: 10px 30px;
+}
+
+.skill h1 {
+    color: white;
+}

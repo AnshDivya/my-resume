@@ -23,9 +23,9 @@
 }
 
 .navigator-button {
-    width: 20%;
+    width: fit-content;
     float: left;
-    margin: auto;
+    padding: 0 25px;
     line-height: 58px;
 }
 

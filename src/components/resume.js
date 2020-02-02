@@ -4,6 +4,7 @@ import Intro from './intro'
 import Background from './background';
 import TextDescription from './textDescription';
 import ExpEdu from './expEdu';
+import Skills from './skill-container';
 function Resume() {
     return (
         <div>
@@ -13,6 +14,7 @@ function Resume() {
             <TextDescription />
             <ExpEdu heading = "EXPERIENCE"/>
             <ExpEdu heading = "EDUCATION"/>
+            <Skills />
         </div>
     );
 }
