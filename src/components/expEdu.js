@@ -1,27 +1,16 @@
 import React from 'react';
 import '../myStyles/experience.css';
 import TimeLine from './timeline';  
-class Experience extends React.Component {
+class ExpEdu extends React.Component {
     
-    handleScroll = e => {
-        console.log("Hello Divyansh");
-        let element = e.target;
-        console.log(element.scrollHeight+" "+element.scrollHeight+" "+element.clientHeight);
-        if (element.scrollHeight - element.scrollTop === element.clientHeight) {
-          alert("Hey! Divyansh"+element);
-        }
-      }
-
-    // componentDidMount() {
-    //     window.addEventListener('scroll', this.handleScroll);
-    // }
+    
     render() {
         return (
 
-            <div onScroll = {this.handleScroll}>
+            <div>
             
             <div className = "experience">
-                <h1>EXPERIENCE</h1>
+                <h1>{this.props.heading}</h1>
             </div> 
             <hr className = "hr-bottom"/>
             
@@ -44,4 +33,4 @@ class Experience extends React.Component {
     }
 }
 
-export default Experience;
+export default ExpEdu;

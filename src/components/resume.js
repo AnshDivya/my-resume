@@ -3,7 +3,7 @@ import Header from './header';
 import Intro from './intro'
 import Background from './background';
 import TextDescription from './textDescription';
-import Experience from './experience';
+import ExpEdu from './expEdu';
 function Resume() {
     return (
         <div>
@@ -11,9 +11,8 @@ function Resume() {
             <Background />
             <Intro />
             <TextDescription />
-            <Experience />
-            <Experience />
-            <Experience />
+            <ExpEdu heading = "EXPERIENCE"/>
+            <ExpEdu heading = "EDUCATION"/>
         </div>
     );
 }
