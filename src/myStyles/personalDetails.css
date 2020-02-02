@@ -33,3 +33,16 @@
     margin: 2px 0;
     color: #182153;
 }
+
+.personalDetails_rightToLeft-appear {
+    opacity: 0.01;
+    position: relative;
+    left: 70px;
+  }
+  
+.personalDetails_rightToLeft-appear.personalDetails_rightToLeft-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: relative;
+    left: 0px;
+}

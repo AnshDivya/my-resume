@@ -18,3 +18,16 @@
 .link-image:hover {
     cursor: pointer;
 }
+
+.image_leftToRight-appear {
+    opacity: 0.01;
+    position: relative;
+    left: -70px;
+  }
+  
+.image_leftToRight-appear.image_leftToRight-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: relative;
+    left: 0px;
+}
