@@ -9,8 +9,8 @@ function Skills() {
                 <h1>SKILLS</h1>
             </div>
             <hr />
-            <div className = "skill-container">
-                <Skill name = "React Js"/>
+            <div className = "skills-container">
+                <Skill name = "React Js React Js"/>
                 <Skill name = "REACT JS"/>
                 <Skill name = "REACT JS"/>
                 <Skill name = "REACT JS"/>

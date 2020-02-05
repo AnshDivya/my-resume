@@ -9,18 +9,36 @@
     font-family: 'Source Code Pro', monospace;
 }
 
-.skill-container {
+.skills-container {
     text-align: center;
     background-color: #182153;
+    padding: 30px 150px;
+}
+
+.skill-container {
+    width: 50%;
+    display: inline-block;
+    padding: 10px 60px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .skill {
-    width: 40%;
-    display: inline-block;
-    background-color: inherit;
-    margin: 10px 30px;
+    background:  rgba(255, 255, 255, 0.2);
+    height: 65px;
 }
 
 .skill h1 {
     color: white;
+    opacity: 1;
+    position: absolute;
+}
+
+.skill_leftToRight-appear {
+    width: 0;
+}
+
+.skill_leftToRight-appear.skill_leftToRight-appear-active {
+    width: 100%;
+    transition: all 2s ease-in;
 }
