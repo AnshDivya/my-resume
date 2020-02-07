@@ -21,6 +21,7 @@
     padding: 10px 60px;
     box-sizing: border-box;
     position: relative;
+    align-items: center;
 }
 
 .skill {
@@ -32,6 +33,7 @@
     color: white;
     opacity: 1;
     position: absolute;
+    margin: 17px 100px;
 }
 
 .skill_leftToRight-appear {
