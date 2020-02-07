@@ -30,7 +30,7 @@ class Skill extends React.Component {
                 transitionAppearTimeout={2000}
                 transitionEnter={false}
                 transitionLeave={false}>
-                    <div className = "skill">
+                    <div className = "skill" id = "hello">
                         <h1>{this.state.showText?this.props.name:''}</h1>    
                     </div>            
                 </ReactCSSTransitionGroup>
