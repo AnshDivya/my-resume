@@ -9,7 +9,7 @@ class ExpEdu extends React.Component {
 
             <div>
             
-            <div className = "experience">
+            <div className = "experience" id = {this.props.heading}>
                 <h1>{this.props.heading}</h1>
             </div> 
             <hr className = "hr-bottom"/>

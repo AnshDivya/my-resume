@@ -9,11 +9,11 @@ function Header() {
                 <h1>Divyansh Thakur</h1>
             </div>
             <div className = 'header-navigation-button-container'>
-                <NavigatorButton name = 'EXPERIENCE'/>
-                <NavigatorButton name = 'EDUCATION'/>
-                <NavigatorButton name = 'SKILLS'/>
-                <NavigatorButton name = 'PROJECTS'/>
-                <NavigatorButton name = 'CONTACT'/>
+                <NavigatorButton itemName = 'EXPERIENCE'/>
+                <NavigatorButton itemName = 'EDUCATION'/>
+                <NavigatorButton itemName = 'SKILLS'/>
+                <NavigatorButton itemName = 'PROJECTS'/>
+                <NavigatorButton itemName = 'CONTACT'/>
             </div>
         </div>
     );

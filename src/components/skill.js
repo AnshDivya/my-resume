@@ -21,7 +21,7 @@ class Skill extends React.Component {
     }
 
     render() {
-        return <div className = "skill-container">
+        return <div className = "skill-container" id = "SKILLS">
             {this.state.showAnimation?(
                 <>
                 <ReactCSSTransitionGroup
