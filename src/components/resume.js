@@ -33,7 +33,6 @@ function Resume() {
         const contactTop = contactRef.current.getBoundingClientRect().top - 400;
         const contactBottom = contactRef.current.getBoundingClientRect().bottom;
 
-        console.log(contactTop, contactBottom);
         if(contactTop <= 0 && contactBottom >= 0)
             newIndex = 4;
         else if(skillTop <= 0 && skillBottom >= 0)
@@ -50,8 +49,6 @@ function Resume() {
     }
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-
-        console.log("USE EFFECT");
         
     })
 

@@ -12,7 +12,7 @@ class TimeLine extends React.Component {
     }
 
     displayAnimation = () => {
-        console.log("hey function called!");
+        
         this.setState({
             showAnimation: true
         })
@@ -24,7 +24,6 @@ class TimeLine extends React.Component {
             <>
             <Waypoint
             onEnter = {({ previousPosition, currentPosition, event }) => {
-                console.log(previousPosition, currentPosition,event);
 
                 if(previousPosition === "below" && currentPosition === "inside") {
                     this.displayAnimation();

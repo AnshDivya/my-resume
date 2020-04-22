@@ -12,7 +12,7 @@ class PersonalDetailsAnimatorOnScroll extends React.Component {
     }
 
     displayAnimation = () => {
-        console.log("hey function called!");
+    
         this.setState({
             showAnimation: true
         })
