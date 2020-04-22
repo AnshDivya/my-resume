@@ -9,14 +9,8 @@ import Contact from './contact';
 function Resume() {
 
     const [index, setIndex] = useState(0);
-    const [isAnimated, updateAnimation] = useState(false)
     const displayStates = ['', 'EXPERIENCE', 'EDUCATION', 'SKILLS', 'CONTACT'];
     
-    function showAnimation() {
-        console.log('ALL LOADED');
-        updateAnimation(true);
-    }
-    window.addEventListener('load', showAnimation);
     const handleScroll = () => {
 
         let newIndex = index;
@@ -59,16 +53,13 @@ function Resume() {
     return (
         <div>
             <Header selected = {displayStates[index]}/>
-            {isAnimated && <>
-                <Background />
-                <Intro />
-                <TextDescription />
-                <TimelineContainer heading = "EXPERIENCE" myRef = {expRef}/>
-                <TimelineContainer heading = "EDUCATION" myRef = {eduRef}/>
-                <Skills myRef = {skillRef}/>
-                <Contact myRef= {contactRef}/>
-            </>}
-            
+            <Background />
+            <Intro />
+            <TextDescription />
+            <TimelineContainer heading = "EXPERIENCE" myRef = {expRef}/>
+            <TimelineContainer heading = "EDUCATION" myRef = {eduRef}/>
+            <Skills myRef = {skillRef}/>
+            <Contact myRef= {contactRef} />
         </div>
     );
 }
