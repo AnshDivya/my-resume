@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from './Image';
-import PersonelDetails from './PersonalDetails';
+import PersonelDetailsAnimator from './PersonalDetailsAnimator';
 import profilePic from '../profilePic.jpg';
 import '../myStyles/intro.css';
 import Links from './links';
@@ -9,7 +9,7 @@ function Intro() {
         <div className = 'intro-container'>
             <div className = 'intro'>
                 <Image src = {profilePic} styleClass = 'profilePic'/>
-                <PersonelDetails />
+                <PersonelDetailsAnimator />
             </div>
             <Links />
         </div>

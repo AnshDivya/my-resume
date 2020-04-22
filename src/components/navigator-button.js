@@ -22,12 +22,13 @@ import React, {Component} from 'react';
     }
 
     render() {
+        const {itemName, selected} = {...this.props};
+        
         return (
-            <div className = 'navigator-button'>
-                <a href={'#' + this.props.itemName} onClick={this.handleClick} aria-label={'Scroll to ' + 
+            <div className = {itemName === selected?'navigator-button--selected navigator-button':'navigator-button'}
+                onClick={this.handleClick} aria-label={'Scroll to ' + 
                     this.props.itemName}>
-                    {this.props.itemName}
-                </a>
+                {this.props.itemName}
             </div>
         );
     }

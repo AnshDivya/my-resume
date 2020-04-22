@@ -2,6 +2,9 @@
     
     position: sticky;
     height: 100px;
+    top: 0;
+    z-index: 1;
+    background-color: white;
 }
 
 .header-name-container {
@@ -25,22 +28,24 @@
 .navigator-button {
     width: fit-content;
     float: left;
-    padding: 20px 25px;
-    line-height: 58px;
-}
-
-a {
-    margin-top: 40px;
+    padding: 0 40px;
     color: #5b0891;
+    line-height: 58px;
+    margin-top: 25px;
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
     font-size: 15px;
     text-decoration: none;
+    cursor: pointer;
 }
 
-a:hover {
+.navigator-button:hover {
     color: #1dd0ff;
-    cursor: pointer;
-    font-weight: lighter;
-    font-size: 15px;
 }
+
+
+
+.navigator-button--selected {
+    color: #1dd0ff;
+}
+

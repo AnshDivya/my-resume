@@ -2,9 +2,9 @@ import React from 'react';
 import '../myStyles/skills.css';
 import Skill from './skill';
 
-function Skills() {
+function Skills(props) {
     return (
-        <div>
+        <div ref = {props.myRef}>
             <div className = "heading">
                 <h1>SKILLS</h1>
             </div>

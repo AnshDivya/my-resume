@@ -1,0 +1,118 @@
+.contact {
+    background-color: whitesmoke;
+}
+.contact-heading {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid white;
+}
+
+.contact-heading h1 {
+    color: #182153;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+.form-container {
+    width: 50%;
+    float: left;
+}
+
+.contact-container {
+    display: inline-block;
+    width:100%;
+} 
+
+.personal-details-container {
+    width: 50%;
+    float: right;
+    border-left: 1px solid white;
+    box-sizing: border-box;
+}
+
+input {
+    
+    padding: 10px 20px;
+    margin: 0 8px 8px;
+    display: inline;
+    box-sizing: border-box;
+    border-width: 0;
+    outline: none;
+  }
+  
+  input:focus {
+    background-color: lightblue;
+  }
+
+  input:hover {
+    background-color: lightblue;
+  }
+
+  textarea {
+
+    padding: 12px 20px;
+    margin: 8px;
+    border-width: 0;
+    width: 395px;
+    height: 125px;
+    resize: none;
+  }
+
+  textarea:focus {
+    background-color: lightblue;
+  }
+
+  textarea:hover {
+      background-color: lightblue;
+      
+  }
+
+  form {
+    margin: 90px 80px;
+    padding-left: 60px;
+  }
+
+  .subject {
+    width: 435px;
+    padding: 12px 20px;
+    margin: 8px;
+  }
+
+  button {
+      width: 435px;
+      margin: 8px;
+      padding: 12px 20px;
+      background-color: #182153;
+      color: white;
+      border-width: 0px;
+  }
+
+  button:hover {
+      cursor: pointer;
+  }
+
+  .form_leftToRight-appear {
+    opacity: 0.01;
+    position: relative;
+    left: -40px;
+  }
+  
+.form_leftToRight-appear.form_leftToRight-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: relative;
+    left: 0px;
+}
+
+.rightToLeft-appear {
+    opacity: 0.01;
+    position: relative;
+    left: 40px;
+  }
+  
+.rightToLeft-appear.rightToLeft-appear-active {
+    opacity: 1;
+    transition: all 1.5s ease-in;
+    position: relative;
+    left: 0px;
+}

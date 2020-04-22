@@ -1,13 +1,13 @@
 import React from 'react';
 import '../myStyles/expEdu.css';
 import TimeLine from './timeline';  
-class ExpEdu extends React.Component {
+class TimelineContainer extends React.Component {
     
     
     render() {
         return (
 
-            <div>
+            <div ref = {this.props.myRef}>
             
             <div className = "experience" id = {this.props.heading}>
                 <h1>{this.props.heading}</h1>
@@ -33,4 +33,4 @@ class ExpEdu extends React.Component {
     }
 }
 
-export default ExpEdu;
+export default TimelineContainer;
