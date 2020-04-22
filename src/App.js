@@ -12,7 +12,6 @@ function App() {
       <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700&display=swap" rel="stylesheet"/>
       </Helmet>
       <Resume />
-      
     </div>
     
   );
