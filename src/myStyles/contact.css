@@ -78,7 +78,7 @@ input {
     margin: 8px;
   }
 
-  button {
+  .submit-button {
       width: 435px;
       margin: 8px;
       padding: 12px 20px;

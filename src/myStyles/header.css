@@ -66,7 +66,17 @@
        float: left;
     }
 
-    
+    button {
+        float: right;
+        padding: 0;
+        border-width: 0;
+        background-color: white;
+    }
 
 
+}
+
+.item {
+    text-align: center;
+    padding: 25px;
 }

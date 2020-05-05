@@ -32,7 +32,7 @@ class ContactForm extends React.Component {
                         <input type = 'email' placeholder = 'Email' />
                         <input type = 'text' placeholder = 'Subject'  className = 'subject' />
                         <textarea placeholder = 'Message'/>
-                        <button type = 'submit'>Submit</button>
+                        <button className = 'submit-button' type = 'submit'>Submit</button>
                     </form>
                 </div>
             </ReactCSSTransitionGroup>

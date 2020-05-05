@@ -56,3 +56,7 @@ p {
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-device-width: 768px) {
+
+}

@@ -6,14 +6,36 @@ import TextDescription from './textDescription';
 import TimelineContainer from './timeline-container';
 import Skills from './skill-container';
 import Contact from './contact';
+import VerticalMenu from './VerticalMenu';
+
 function Resume() {
 
-    const [index, setIndex] = useState(0);
-    const displayStates = ['', 'EXPERIENCE', 'EDUCATION', 'SKILLS', 'CONTACT'];
+    const [ state, setState ] = useState({
+        view: '',
+        isMenuVisible: false,
+        scrollTo: ''
+    });
+
+    console.log(state);
     
+    const handleMenu = () => {
+        setState({...state, isMenuVisible: !state.isMenuVisible});
+        console.log('MENU VISIBILITY CHANGED');
+        
+    }
+    
+    const handleScrollTo = (target) => {
+
+        setState({...state, scrollTo: target, isMenuVisible: false});
+        console.log('SCROLL TO CHANGED');
+    }
+
+    const changeView = (newView) => {
+        setState({...state, view: newView});
+    }
     const handleScroll = () => {
 
-        let newIndex = index;
+        let newIndex = state.index;
         // console.log(window.pageYOffset, skillRef.current.getBoundingClientRect().top, 
         // eduRef.current.getBoundingClientRect().top
         // ,expRef.current.getBoundingClientRect().top);
@@ -37,13 +59,39 @@ function Resume() {
             newIndex = 1;
         else
             newIndex = 0;
-        setIndex(newIndex); 
         
+        // console.log('CHANGING FROM '+state.index+' TO '+newIndex);
         
+        // setState({...state, index: newIndex }); 
+        // console.log('CHANGED TO '+state.index);
+        
+            
     }
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+
+        console.log('RENDERED ');
+        console.log(state);
         
+        // if(!state.isMenuVisible) {
+        //  window.addEventListener(, handleScroll);
+        //     console.log('SCROLL EVENT ADDED');   
+        // }
+        // else {
+        //     window.removeEventListener('scroll', handleScroll);
+        //     console.log('SCROLL EVENT REMOVED');
+            
+        // }
+            
+        
+        if(state.scrollTo !== '') {
+            const target = document.getElementById(state.scrollTo);
+            if(target) {
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        }
     })
 
     const expRef = useRef(null);
@@ -51,16 +99,19 @@ function Resume() {
     const skillRef = useRef(null);
     const contactRef = useRef(null);
     return (
+        state.isMenuVisible?
+        <VerticalMenu handleScrollTo = {handleScrollTo}/>:
         <div>
-            <Header selected = {displayStates[index]}/>
+            <Header selected = {state.view} handleMenu = {handleMenu}/>
             <Background />
             <Intro />
             <TextDescription />
-            <TimelineContainer heading = "EXPERIENCE" myRef = {expRef}/>
-            <TimelineContainer heading = "EDUCATION" myRef = {eduRef}/>
-            <Skills myRef = {skillRef}/>
-            <Contact myRef= {contactRef} />
+            <TimelineContainer heading = "EXPERIENCE" myRef = {expRef} changeView = {changeView} />
+            <TimelineContainer heading = "EDUCATION" myRef = {eduRef} changeView = {changeView} />
+            <Skills heading = "SKILLS" myRef = {skillRef} changeView = {changeView} />
+            <Contact heading = 'CONTACT' myRef= {contactRef} changeView = {changeView} />
         </div>
+        
     );
 }
 
