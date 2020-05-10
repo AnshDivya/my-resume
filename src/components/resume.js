@@ -7,6 +7,7 @@ import TimelineContainer from './timeline-container';
 import Skills from './skill-container';
 import Contact from './contact';
 import VerticalMenu from './VerticalMenu';
+import {animateScroll as scroll } from 'react-scroll';
 
 function Resume() {
 
@@ -21,13 +22,12 @@ function Resume() {
     const handleMenu = () => {
         setState({...state, isMenuVisible: !state.isMenuVisible});
         console.log('MENU VISIBILITY CHANGED');
-        
     }
     
     const handleScrollTo = (target) => {
 
         setState({...state, scrollTo: target, isMenuVisible: false});
-        console.log('SCROLL TO CHANGED');
+        console.log('SCROLL TO CHANGED TO '+ target);
     }
 
     const changeView = (newView) => {
@@ -86,10 +86,8 @@ function Resume() {
         if(state.scrollTo !== '') {
             const target = document.getElementById(state.scrollTo);
             if(target) {
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
+                const top = target.getBoundingClientRect().top + window.scrollY;
+                scroll.scrollTo(top);
             }
         }
     })
@@ -99,17 +97,20 @@ function Resume() {
     const skillRef = useRef(null);
     const contactRef = useRef(null);
     return (
-        state.isMenuVisible?
-        <VerticalMenu handleScrollTo = {handleScrollTo}/>:
+        
         <div>
-            <Header selected = {state.view} handleMenu = {handleMenu}/>
-            <Background />
-            <Intro />
-            <TextDescription />
-            <TimelineContainer heading = "EXPERIENCE" myRef = {expRef} changeView = {changeView} />
-            <TimelineContainer heading = "EDUCATION" myRef = {eduRef} changeView = {changeView} />
-            <Skills heading = "SKILLS" myRef = {skillRef} changeView = {changeView} />
-            <Contact heading = 'CONTACT' myRef= {contactRef} changeView = {changeView} />
+            <Header selected = {state.view} handleMenu = {handleMenu} isMenuVisible = {state.isMenuVisible} />
+            {state.isMenuVisible?
+                <VerticalMenu handleScrollTo = {handleScrollTo} />:<>
+                <Background />
+                <Intro />
+                <TextDescription />
+                <TimelineContainer heading = "EXPERIENCE" myRef = {expRef} changeView = {changeView} />
+                <TimelineContainer heading = "EDUCATION" myRef = {eduRef} changeView = {changeView} />
+                <Skills heading = "SKILLS" myRef = {skillRef} changeView = {changeView} />
+                <Contact heading = 'CONTACT' myRef= {contactRef} changeView = {changeView} />
+                </>
+            }
         </div>
         
     );
