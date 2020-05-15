@@ -19,7 +19,5 @@
     .intro {
         flex-direction: column;
     }
-    .intro-container {
-        padding: 0 30px;
-    }
+    
 }
