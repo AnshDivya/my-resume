@@ -20,16 +20,11 @@ function Header(props) {
         }
     });
 
-    const handleClick = () => {
-        const element = document.getElementById('CONTACT');
-        
-    }
-
     return (
         <div className = 'header'>
             <div className = 'header-name-container'>
                 <h1>Divyansh Thakur</h1>
-                {mobileMenu && <button onClick = {props.handleMenu}>
+                {mobileMenu && <button style = {{ outline: 'none' }} onClick = {props.handleMenu}>
                 {isMenuVisible ? 
                 <ClearIcon 
                     style = {
@@ -38,7 +33,8 @@ function Header(props) {
                             height: '70px',
                             fontSize: '40px',
                             float: 'right',
-                            marginRight: '10px'
+                            marginRight: '10px',
+                            
                         }
                     }
                 /> :
@@ -49,7 +45,7 @@ function Header(props) {
                             height: '70px',
                             fontSize: '40px',
                             float: 'right',
-                            marginRight: '10px'
+                            marginRight: '10px',
                         }
                 }
                 

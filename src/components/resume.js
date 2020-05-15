@@ -102,8 +102,9 @@ function Resume() {
             <Header selected = {state.view} handleMenu = {handleMenu} isMenuVisible = {state.isMenuVisible} />
             {state.isMenuVisible?
                 <VerticalMenu handleScrollTo = {handleScrollTo} />:<>
-                <Background />
-                <Intro />
+                <Background>
+                    <Intro />
+                </Background>
                 <TextDescription />
                 <TimelineContainer heading = "EXPERIENCE" myRef = {expRef} changeView = {changeView} />
                 <TimelineContainer heading = "EDUCATION" myRef = {eduRef} changeView = {changeView} />

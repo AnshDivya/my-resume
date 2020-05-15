@@ -31,3 +31,11 @@
     position: relative;
     left: 0px;
 }
+
+@media only screen and (max-width: 868px) {
+    .profilePic {
+        width: 80vw;
+        height: 80vw;
+        height: same-as-width;
+    }
+}

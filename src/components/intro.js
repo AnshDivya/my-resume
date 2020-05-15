@@ -5,9 +5,10 @@ import profilePic from '../profilePic.jpg';
 import '../myStyles/intro.css';
 import Links from './links';
 function Intro() {
+    
     return (
-        <div className = 'intro-container'>
-            <div className = 'intro'>
+        <div className = 'intro-container' >
+            <div className = 'intro' id = 'intro'>
                 <Image src = {profilePic} styleClass = 'profilePic'/>
                 <PersonelDetailsAnimator />
             </div>

@@ -1,13 +1,11 @@
 import React from 'react';
-
-function Background() {
-    var myStyles = {
-        "height": "600px",
-        "background-color": "#182153"
-    };
+import '../myStyles/background.css';
+import Intro from './intro';
+function Background(props) {
+    //const height = document.getElementById('intro').style.height;
     return (
-        
-        <div style = {myStyles}>
+        <div className = 'background'>
+            {props.children}
         </div>
     );
 }
