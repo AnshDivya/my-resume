@@ -1,9 +1,9 @@
 .personal-details {
-    width: 390px;
-    height: 390px;
-    padding-left: 10vw;
-    padding-top: 10vw;
+    width: 470px;
+    height: 470px;
+    padding: 5vw;
     background-color: whitesmoke;
+    box-sizing: border-box;
 }
 
 .personal-details h1 {
