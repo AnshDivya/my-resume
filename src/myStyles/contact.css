@@ -16,6 +16,8 @@
 .form-container {
     width: 50%;
     float: left;
+    padding: 5vw;
+    box-sizing: border-box;
 }
 
 .contact-container {
@@ -32,8 +34,9 @@
 
 input {
     
-    padding: 10px 20px;
-    margin: 0 8px 8px;
+    padding: 12px 1vw;
+    margin: 8px;
+    width: 45%;
     display: inline;
     box-sizing: border-box;
     border-width: 0;
@@ -50,10 +53,10 @@ input {
 
   textarea {
 
-    padding: 12px 20px;
+    padding: 12px 1vw;
     margin: 8px;
     border-width: 0;
-    width: 395px;
+    width: 88%;
     height: 125px;
     resize: none;
   }
@@ -68,18 +71,15 @@ input {
   }
 
   form {
-    margin: 90px 80px;
-    padding-left: 60px;
+    text-align: right;
   }
 
   .subject {
-    width: 435px;
-    padding: 12px 20px;
-    margin: 8px;
+    width: 93.25%;
   }
 
   .submit-button {
-      width: 435px;
+      width: 93.25%;
       margin: 8px;
       padding: 12px 20px;
       background-color: #182153;
@@ -115,4 +115,10 @@ input {
     transition: all 1.5s ease-in;
     position: relative;
     left: 0px;
+}
+
+@media only screen and (max-width: 868px) {
+  input {
+    width: 93.25%;
+  }
 }
