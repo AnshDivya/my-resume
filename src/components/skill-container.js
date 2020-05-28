@@ -23,12 +23,17 @@ function Skills(props) {
             </div>
             <hr />
             <div className = "skills-container">
-                <Skill name = "React Js React Js"/>
-                <Skill name = "REACT JS"/>
-                <Skill name = "REACT JS"/>
-                <Skill name = "REACT JS"/>
-                <Skill name = "REACT JS"/>
-                <Skill name = "REACT JS"/>
+                <div className = 'skills-compartment skills-compartment-left'>
+                    <Skill name = "React Js React Js"/>
+                    <Skill name = "REACT JS"/>
+                    <Skill name = "REACT JS"/>
+                </div>
+                <div className = 'skills-compartment skills-compartment-right'>
+                    <Skill name = "REACT JS"/>
+                    <Skill name = "REACT JS"/>
+                    <Skill name = "REACT JS"/>
+                </div>
+                
             </div>
         </div>
         </Waypoint>

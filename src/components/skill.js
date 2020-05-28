@@ -20,7 +20,7 @@ class Skill extends React.Component {
     }
 
     render() {
-        return <div className = "skill-container" id = "SKILLS">
+        return <>
             {this.state.showAnimation?(
                 <>
                 <ReactCSSTransitionGroup
@@ -29,9 +29,10 @@ class Skill extends React.Component {
                 transitionAppearTimeout={2000}
                 transitionEnter={false}
                 transitionLeave={false}>
-                    <div className = "skill" id = "hello">
-                        <h1>{this.state.showText?this.props.name:''}</h1>    
-                    </div>            
+                    <div className = "skill-container" id = "SKILLS">
+                        <h1 className = 'skill'>{this.state.showText?this.props.name:' '}</h1>
+                    </div>
+                    
                 </ReactCSSTransitionGroup>
                 
                 </>
@@ -49,7 +50,7 @@ class Skill extends React.Component {
             </>
             
         )}
-        </div>
+        </>
         
     }
 }
