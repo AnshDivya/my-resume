@@ -121,4 +121,20 @@ input {
   input {
     width: 93.25%;
   }
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  .personal-details-container {
+    width: 100%;
+  }
+
+  textarea {
+    width: 91%;
+  }
 }
