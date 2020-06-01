@@ -12,12 +12,12 @@ function Skills(props) {
                 if((previousPosition === "below" || previousPosition === 'above') && currentPosition === "inside") {
                     console.log('CHANGING VIEW TO '+props.heading);
                     
-                    props.changeView(props.heading)
+                    props.changeView(props.heading);
 
                 }
             }}
         >
-            <div ref = {props.myRef}>
+            <div ref = {props.myRef} id = {props.heading}>
             <div className = "heading">
                 <h1>SKILLS</h1>
             </div>
