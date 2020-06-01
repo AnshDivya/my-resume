@@ -88,6 +88,8 @@ function Resume() {
             if(target) {
                 const top = target.getBoundingClientRect().top + window.scrollY;
                 scroll.scrollTo(top);
+                setState({...state, scrollTo: ''});
+
             }
         }
     })
