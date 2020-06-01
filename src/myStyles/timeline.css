@@ -114,13 +114,13 @@ p {
     left: 0px;
 }
 
-.bottomToTop-appear {
+.dotAnimation-appear {
     opacity: 0.01;
     position: absolute;
     top: 30px;
   }
   
-.bottomToTop-appear.bottomToTop-appear-active {
+.dotAnimation-appear.dotAnimation-appear-active {
     opacity: 1;
     transition: all 1.5s ease-in;
     position: absolute;
@@ -147,5 +147,20 @@ p {
 
     .org-and-desc {
         padding-right: 40px;
+    }
+
+    .dotAnimation-appear {
+        opacity: 0.01;
+        position: absolute;
+        left: -60px;
+        top: -55px
+      }
+      
+    .dotAnimation-appear.dotAnimation-appear-active {
+        opacity: 1;
+        transition: all 1.5s ease-in;
+        position: absolute;
+        left: 0px;
+        top: -55px
     }
 }

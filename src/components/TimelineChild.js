@@ -20,7 +20,7 @@ function TimelineChild(props) {
     <div className = "org-and-desc">
         
         <ReactCSSTransitionGroup
-        transitionName="bottomToTop"
+        transitionName="dotAnimation"
         transitionAppear={true}
         transitionAppearTimeout={1500}
         transitionEnter={false}
