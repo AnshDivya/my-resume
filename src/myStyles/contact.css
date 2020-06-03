@@ -62,7 +62,7 @@ input {
   }
 
   textarea:focus {
-    background-color: lightblue;
+    background-color: rgb(84, 137, 155);
   }
 
   textarea:hover {
@@ -132,7 +132,7 @@ input {
 
   .personal-details-container {
     width: 100%;
-    padding-left: 20px;
+    text-align: center;
   }
 
   textarea {

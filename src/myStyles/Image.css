@@ -12,7 +12,8 @@
 }
 
 .link-image {
-    margin: 0 15px;
+    margin-right: 20px;
+    height: 20px;
 }
  
 .link-image:hover {

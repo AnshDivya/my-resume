@@ -8,6 +8,7 @@ import Contact from './components/contact';
 import VerticalMenu from './components/VerticalMenu';
 import {animateScroll as scroll } from 'react-scroll';
 import './App.css';
+import Footer from './components/Footer';
   
 function App() {
   const [ state, setState ] = useState({
@@ -69,6 +70,7 @@ return (
             <TimelineContainer showAnimation = {state.showAnimation} heading = "EDUCATION" myRef = {eduRef} changeView = {changeView} />
             <Skills showAnimation = {state.showAnimation} heading = "SKILLS" myRef = {skillRef} changeView = {changeView} />
             <Contact showAnimation = {state.showAnimation} heading = 'CONTACT' myRef= {contactRef} changeView = {changeView} />
+            <Footer />
             </>
         }
     </div>

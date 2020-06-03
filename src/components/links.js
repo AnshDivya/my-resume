@@ -9,6 +9,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Waypoint } from 'react-waypoint';
 
 import '../myStyles/links.css'
+import LinkContainer from './LinkContainer';
 class Links extends React.Component {
     constructor(props) {
         super(props);
@@ -23,9 +24,18 @@ class Links extends React.Component {
             showAnimation: true
         })
     }
-
+    
     render() {
-        return this.state.showAnimation?(
+        const {showAnimation: animationAllowed } = this.props;
+        return !animationAllowed?
+        <LinkContainer>
+            <Image src = {linkedInLogo} styleClass = "link-image"/>
+            <Image src = {facebookLogo} styleClass = "link-image"/>
+            <Image src = {instagramLogo} styleClass = "link-image"/>
+            <Image src = {twitterLogo} styleClass = "link-image"/>
+        </LinkContainer> 
+        
+        :this.state.showAnimation?(
             <ReactCSSTransitionGroup
                 transitionName="slideDown"
                 transitionAppear={true}
@@ -33,12 +43,12 @@ class Links extends React.Component {
                 transitionEnter={false}
                 transitionLeave={false}
             >
-                <div className = "links-container">
+                <LinkContainer class = 'links-container'>
                     <Image src = {linkedInLogo} styleClass = "link-image"/>
                     <Image src = {facebookLogo} styleClass = "link-image"/>
                     <Image src = {instagramLogo} styleClass = "link-image"/>
                     <Image src = {twitterLogo} styleClass = "link-image"/>
-                </div>
+                </LinkContainer>
             </ReactCSSTransitionGroup>
         ): (
             

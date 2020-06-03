@@ -13,7 +13,7 @@ function Intro(props) {
                     <Image {...props} src = {profilePic} styleClass = 'profilePic'/>
                     <PersonelDetailsAnimator {...props}/>
                 </div>
-            <Links />
+            <Links {...props}/>
             </div>
         </div>
        

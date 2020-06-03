@@ -3,6 +3,7 @@ import '../myStyles/contact.css';
 import ContactForm from './contactform';
 import PersonalDetailsAnimatorOnScroll from './PersonalDetailsAnimatorOnScroll';
 import { Waypoint } from 'react-waypoint';
+
 function Contact(props) {
 
     return (
@@ -29,7 +30,7 @@ function Contact(props) {
             </div>
 
         </Waypoint>
-       
+
         )
 }
 
