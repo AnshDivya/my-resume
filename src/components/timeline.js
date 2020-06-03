@@ -18,6 +18,7 @@ class TimeLine extends React.Component {
         })
     }
     render() {
+        
         return this.state.showAnimation?
             <TimelineChild {...this.props}/>:(
             

@@ -19,8 +19,14 @@ class PersonalDetailsAnimatorOnScroll extends React.Component {
     }
 
     render() {
-        return this.state.showAnimation?(
-            <ReactCSSTransitionGroup
+        const { showAnimation: animationAllowed } = this.props;
+        return !animationAllowed?
+        <div className = 'personal-details-container'>
+        <PersonalDetails />
+        </div>
+
+        :this.state.showAnimation?
+            (<ReactCSSTransitionGroup
                 transitionName="rightToLeft"
                 transitionAppear={true}
                 transitionAppearTimeout={1500}

@@ -18,23 +18,34 @@ class ContactForm extends React.Component {
     }
 
     render() {
-        return this.state.showAnimation?(
+        const { showAnimation: animationAllowed } = this.props;
+        return !animationAllowed?
+        (<div className = 'form-container'>
+            <form>
+                <input type = 'text' placeholder = 'Name' />
+                <input type = 'email' placeholder = 'Email' />
+                <input type = 'text' placeholder = 'Subject'  className = 'subject' />
+                <textarea placeholder = 'Message'/>
+                <button className = 'submit-button' type = 'submit'>Submit</button>
+            </form>
+        </div>)
+        :this.state.showAnimation?(
             <ReactCSSTransitionGroup
-                transitionName="form_leftToRight"
-                transitionAppear={true}
-                transitionAppearTimeout={1500}
-                transitionEnter={false}
-                transitionLeave={false}
+            transitionName="form_leftToRight"
+            transitionAppear={true}
+            transitionAppearTimeout={1500}
+            transitionEnter={false}
+            transitionLeave={false}
             >
-                <div className = 'form-container'>
-                    <form>
-                        <input type = 'text' placeholder = 'Name' />
-                        <input type = 'email' placeholder = 'Email' />
-                        <input type = 'text' placeholder = 'Subject'  className = 'subject' />
-                        <textarea placeholder = 'Message'/>
-                        <button className = 'submit-button' type = 'submit'>Submit</button>
-                    </form>
-                </div>
+            <div className = 'form-container'>
+                <form>
+                    <input type = 'text' placeholder = 'Name' />
+                    <input type = 'email' placeholder = 'Email' />
+                    <input type = 'text' placeholder = 'Subject'  className = 'subject' />
+                    <textarea placeholder = 'Message'/>
+                    <button className = 'submit-button' type = 'submit'>Submit</button>
+                </form>
+            </div>
             </ReactCSSTransitionGroup>
         ): (
             <>
@@ -53,7 +64,7 @@ class ContactForm extends React.Component {
                         <input type = 'email' placeholder = 'Email' />
                         <input type = 'text' placeholder = 'Subject'  className = 'subject' />
                         <textarea placeholder = 'Message'/>
-                        <button type = 'submit'>Submit</button>
+                        <button className = 'submit-button' type = 'submit'>Submit</button>
                     </form>
                 </div>
             </>

@@ -2,12 +2,12 @@ import React from 'react';
 import '../myStyles/Image.css'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Image extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
+    
     render() {
+        const {showAnimation} = this.props;
+        
         return (
+            showAnimation?
             <ReactCSSTransitionGroup
                 transitionName="image_leftToRight"
                 transitionAppear={true}
@@ -17,6 +17,7 @@ class Image extends React.Component {
             >
                 <img alt = 'coding' className = {this.props.styleClass}  src = {this.props.src} />             
             </ReactCSSTransitionGroup>
+            :<img alt = 'coding' className = {this.props.styleClass}  src = {this.props.src} />
         );
 
         

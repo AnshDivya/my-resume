@@ -20,8 +20,13 @@ class Skill extends React.Component {
     }
 
     render() {
+        const { showAnimation: animationAllowed } =  this.props;
         return <>
-            {this.state.showAnimation?(
+            {!animationAllowed?
+            <div className = "skill-container" id = "SKILLS">
+                <h1 className = 'skill'>{this.props.name}</h1>
+            </div>:
+            this.state.showAnimation?(
                 <>
                 <ReactCSSTransitionGroup
                 transitionName="skill_leftToRight"
@@ -30,7 +35,7 @@ class Skill extends React.Component {
                 transitionEnter={false}
                 transitionLeave={false}>
                     <div className = "skill-container" id = "SKILLS">
-                        <h1 className = 'skill'>{this.state.showText?this.props.name:' '}</h1>
+                        <h1 className = 'skill'>{this.state.showText?this.props.name:''}</h1>
                     </div>
                     
                 </ReactCSSTransitionGroup>

@@ -23,8 +23,8 @@ function Contact(props) {
                     <h1> CONTACT ME</h1>
                 </div>
                 <div className = 'contact-container'>
-                    <ContactForm />
-                    <PersonalDetailsAnimatorOnScroll />
+                    <ContactForm {...props}/>
+                    <PersonalDetailsAnimatorOnScroll {...props} />
                 </div>
             </div>
 

@@ -4,16 +4,19 @@ import PersonelDetailsAnimator from './PersonalDetailsAnimator';
 import profilePic from '../profilePic.jpg';
 import '../myStyles/intro.css';
 import Links from './links';
-function Intro() {
+function Intro(props) {
     
     return (
-        <div className = 'intro-container' >
-            <div className = 'intro' id = 'intro'>
-                <Image src = {profilePic} styleClass = 'profilePic'/>
-                <PersonelDetailsAnimator />
-            </div>
+        <div className = 'background'>
+            <div className = 'intro-container' >
+                <div className = 'intro' id = 'intro'>
+                    <Image {...props} src = {profilePic} styleClass = 'profilePic'/>
+                    <PersonelDetailsAnimator {...props}/>
+                </div>
             <Links />
+            </div>
         </div>
+       
         
     );
 }

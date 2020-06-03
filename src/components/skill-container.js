@@ -24,14 +24,14 @@ function Skills(props) {
             <hr />
             <div className = "skills-container">
                 <div className = 'skills-compartment skills-compartment-left'>
-                    <Skill name = "React Js React Js"/>
-                    <Skill name = "REACT JS"/>
-                    <Skill name = "REACT JS"/>
+                    <Skill {...props} name = "React Js React Js"/>
+                    <Skill {...props} name = "REACT JS"/>
+                    <Skill {...props} name = "REACT JS"/>
                 </div>
                 <div className = 'skills-compartment skills-compartment-right'>
-                    <Skill name = "REACT JS"/>
-                    <Skill name = "REACT JS"/>
-                    <Skill name = "REACT JS"/>
+                    <Skill {...props} name = "REACT JS"/>
+                    <Skill {...props} name = "REACT JS"/>
+                    <Skill {...props} name = "REACT JS"/>
                 </div>
                 
             </div>
