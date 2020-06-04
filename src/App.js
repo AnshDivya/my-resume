@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Header from './components/header';
 import Intro from './components/intro'
 import TextDescription from './components/textDescription';
@@ -10,6 +10,40 @@ import {animateScroll as scroll } from 'react-scroll';
 import './App.css';
 import Footer from './components/Footer';
   
+const expData = [
+    {   id: 1,
+        years: "June-July 2019",
+        role: "Associate Software Developer",
+        org: "EXPEDIA GROUP",
+        description: "Worked on the VOYAGER NEXT PLATFORM.The Task was to add an Agent to Agent Consult feature on the platform. Using this feature, an agent could consult to another agent while serving a customer. Technologies Used: JavaScript, ReactJS, CSS, Redux."
+    }
+]
+
+const eduData = [
+    
+    {
+        id: 3,
+        years: "2016-2020",
+        role: "B.E.(IT UNDERGRAD)",
+        org: "NSIT DWARKA, NEW DELHI",
+        description: "I am currently in my fourth year. During these four years, I tried a number of things such as Competitive Programming, Web Development, Machine Learning. I did a number of projects such as News App, Digit Recognition Model, English to Hindi Translator etc."
+    },
+    {
+        id: 1,
+        years: "2014-2015",
+        role: "Class XII",
+        org: "GBSSS HASTSAL NEW DELHI",
+        description: "Science Stream(PCM) 95.4%"
+    },
+    {
+        id: 2,
+        years: "2012-2013",
+        role: "Class X",
+        org: "GBSSS HASTSAL NEW DELHI",
+        description: "10.0 CGPA"
+    }
+]
+
 function App() {
   const [ state, setState ] = useState({
     view: '',
@@ -51,11 +85,6 @@ useEffect(() => {
     }
 }, [state]);
 
-const expRef = useRef(null);
-const eduRef = useRef(null);
-const skillRef = useRef(null);
-const contactRef = useRef(null);
-
 console.log('IN APP.JS: '+state.showAnimation);
 
 return (
@@ -66,10 +95,10 @@ return (
             <VerticalMenu handleScrollTo = {handleScrollTo} />:<>
             <Intro showAnimation = {state.showAnimation}/>
             <TextDescription />
-            <TimelineContainer showAnimation = {state.showAnimation} heading = "EXPERIENCE" myRef = {expRef} changeView = {changeView} />
-            <TimelineContainer showAnimation = {state.showAnimation} heading = "EDUCATION" myRef = {eduRef} changeView = {changeView} />
-            <Skills showAnimation = {state.showAnimation} heading = "SKILLS" myRef = {skillRef} changeView = {changeView} />
-            <Contact showAnimation = {state.showAnimation} heading = 'CONTACT' myRef= {contactRef} changeView = {changeView} />
+            <TimelineContainer showAnimation = {state.showAnimation} heading = "EDUCATION" changeView = {changeView} data = {expData}/>
+            <TimelineContainer showAnimation = {state.showAnimation} heading = "EDUCATION"  changeView = {changeView} data = {eduData}/>
+            <Skills showAnimation = {state.showAnimation} heading = "SKILLS" changeView = {changeView} />
+            <Contact showAnimation = {state.showAnimation} heading = 'CONTACT' changeView = {changeView} />
             <Footer />
             </>
         }

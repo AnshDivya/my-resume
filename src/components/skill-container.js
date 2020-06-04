@@ -19,19 +19,19 @@ function Skills(props) {
         >
             <div ref = {props.myRef} id = {props.heading}>
             <div className = "heading">
-                <h1>SKILLS</h1>
+                <h1>SKILLS & INTERESTS</h1>
             </div>
             <hr />
             <div className = "skills-container">
                 <div className = 'skills-compartment skills-compartment-left'>
-                    <Skill {...props} name = "React Js React Js"/>
-                    <Skill {...props} name = "REACT JS"/>
-                    <Skill {...props} name = "REACT JS"/>
+                    <Skill {...props} name = "Java"/>
+                    <Skill {...props} name = "React and Redux"/>
+                    <Skill {...props} name = "Javascript"/>
                 </div>
                 <div className = 'skills-compartment skills-compartment-right'>
-                    <Skill {...props} name = "REACT JS"/>
-                    <Skill {...props} name = "REACT JS"/>
-                    <Skill {...props} name = "REACT JS"/>
+                    <Skill {...props} name = "Competitive Programming"/>
+                    <Skill {...props} name = "Web Development"/>
+                    <Skill {...props} name = "Android Development"/>
                 </div>
                 
             </div>

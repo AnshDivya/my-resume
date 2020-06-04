@@ -40,6 +40,12 @@ class Form extends React.Component {
         xhr.send(data);
     }
 
+    handleClick = () => {
+        this.setState({
+            status: ''
+        })
+    }
+
     render() {
         return(
             <form 
@@ -52,11 +58,16 @@ class Form extends React.Component {
             <input type = 'text' placeholder = 'Subject'  className = 'subject' name = 'subject' onChange = {this.handleChange} value = {this.state.subject}/>
             <textarea placeholder = 'Message' name = 'body' onChange = {this.handleChange} value = {this.state.body}/>
             {this.state.status === 'SUCCESS'?
-                <p className = 'submit-button'>Thanks! I will contact you shortly</p>:
-                <button className = 'submit-button' type = 'submit'>Submit</button>
-            }
-            {
-                this.state.status === "ERROR" && <p>Ooops! There was an error.</p>
+                <>
+                    <p style = {{textAlign: 'center',fontSize: '18px', fontWeight: 'bold'}}>Thanks! I will contact you shortly :)</p>
+                    <button  className= 'square-button' onClick = {this.handleClick}>Send another message</button>
+                </>
+                :this.state.status === 'ERROR'?
+                <>
+                    <p style = {{textAlign: 'center',fontSize: '18px', fontWeight: 'bold'}}>Ooops! There was some error :(</p>
+                    <button  className= 'square-button' onClick = {this.handleClick}>Try Again</button>
+                </>
+                :<button className= 'square-button' type = 'submit'>Submit</button>
             }
         </form>
         )

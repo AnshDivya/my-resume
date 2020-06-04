@@ -29,10 +29,16 @@ class PersonalDetailsAnimatorOnScroll extends React.Component {
         <div className = 'personal-details-container'>
             <PersonalDetails>
                 <LinkContainer class = 'links-container2'>
-                    <Image src = {linkedInLogo} styleClass = "link-image"/>
-                    <Image src = {facebookLogo} styleClass = "link-image"/>
-                    <Image src = {twitterLogo} styleClass = "link-image"/>
-                    <Image src = {instagramLogo} styleClass = "link-image"/>
+                    <a href = "https://www.linkedin.com/in/divyansh-thakur-929765167/">
+                        <Image src = {linkedInLogo} styleClass = "link-image"/>
+                    </a>
+                    <a href = "https://www.facebook.com/divyansh.thakur.5070/">
+                        <Image src = {facebookLogo} styleClass = "link-image"/>
+                    </a>
+                    <a href = "https://twitter.com/Divyans28185258">
+                        <Image src = {twitterLogo} styleClass = "link-image"/>
+                    </a>
+                    
                 </LinkContainer>
             </PersonalDetails>
         </div>
@@ -49,10 +55,15 @@ class PersonalDetailsAnimatorOnScroll extends React.Component {
                 <div className = 'personal-details-container'>
                     <PersonalDetails>
                         <LinkContainer class = 'links-container2'>
+                            <a href = "https://www.linkedin.com/in/divyansh-thakur-929765167/">
                             <Image src = {linkedInLogo} styleClass = "link-image"/>
-                            <Image src = {facebookLogo} styleClass = "link-image"/>
-                            <Image src = {twitterLogo} styleClass = "link-image"/>
-                            <Image src = {instagramLogo} styleClass = "link-image"/>
+                            </a>
+                            <a href = "https://www.facebook.com/divyansh.thakur.5070/">
+                                <Image src = {facebookLogo} styleClass = "link-image"/>
+                            </a>
+                            <a href = "https://twitter.com/Divyans28185258">
+                                <Image src = {twitterLogo} styleClass = "link-image"/>
+                            </a>
                         </LinkContainer>
                     </PersonalDetails>
                     
@@ -72,10 +83,15 @@ class PersonalDetailsAnimatorOnScroll extends React.Component {
                 <div className = 'personal-details-container'>
                     <PersonalDetails />
                     <LinkContainer>
-                        <Image src = {linkedInLogo} styleClass = "link-image"/>
-                        <Image src = {facebookLogo} styleClass = "link-image"/>
-                        <Image src = {twitterLogo} styleClass = "link-image"/>
-                        <Image src = {instagramLogo} styleClass = "link-image"/>
+                        <a href = "https://www.linkedin.com/in/divyansh-thakur-929765167/">
+                            <Image src = {linkedInLogo} styleClass = "link-image"/>
+                        </a>
+                        <a href = "https://www.facebook.com/divyansh.thakur.5070/">
+                            <Image src = {facebookLogo} styleClass = "link-image"/>
+                        </a>
+                        <a href = "https://twitter.com/Divyans28185258">
+                            <Image src = {twitterLogo} styleClass = "link-image"/>
+                        </a>
                     </LinkContainer>
                 </div>
             </>

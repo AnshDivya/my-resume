@@ -4,6 +4,7 @@
     text-align: right;
     padding-right: 4vw;
     position: relative;
+    min-width: 45vw;
 }
 
 .dot-and-vl-container {
@@ -65,7 +66,7 @@ h2 {
     font-size: 14px;
     font-weight: bold;
     font-family: 'Ubuntu', sans-serif;
-    letter-spacing: 0.2em;
+    
     margin-bottom: 15px;
 }
 
@@ -74,7 +75,7 @@ h3 {
     font-size: 12px;
     font-weight: lighter;
     color: #182153;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
     margin-bottom: 15px;    
 
 }

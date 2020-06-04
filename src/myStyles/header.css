@@ -78,5 +78,9 @@
 
 .item {
     text-align: center;
-    padding: 25px;
+    padding: 10%;
+}
+
+.item:hover {
+    cursor: pointer;
 }

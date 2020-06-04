@@ -28,11 +28,16 @@ class Links extends React.Component {
     render() {
         const {showAnimation: animationAllowed } = this.props;
         return !animationAllowed?
-        <LinkContainer>
-            <Image src = {linkedInLogo} styleClass = "link-image"/>
-            <Image src = {facebookLogo} styleClass = "link-image"/>
-            <Image src = {instagramLogo} styleClass = "link-image"/>
-            <Image src = {twitterLogo} styleClass = "link-image"/>
+        <LinkContainer class = 'links-container'>
+            <a href = "https://www.linkedin.com/in/divyansh-thakur-929765167/">
+                <Image src = {linkedInLogo} styleClass = "link-image"/>
+            </a>
+            <a href = "https://www.facebook.com/divyansh.thakur.5070/">
+                <Image src = {facebookLogo} styleClass = "link-image"/>
+            </a>
+            <a href = "https://twitter.com/Divyans28185258">
+                <Image src = {twitterLogo} styleClass = "link-image"/>
+            </a>
         </LinkContainer> 
         
         :this.state.showAnimation?(
@@ -44,10 +49,16 @@ class Links extends React.Component {
                 transitionLeave={false}
             >
                 <LinkContainer class = 'links-container'>
-                    <Image src = {linkedInLogo} styleClass = "link-image"/>
-                    <Image src = {facebookLogo} styleClass = "link-image"/>
-                    <Image src = {instagramLogo} styleClass = "link-image"/>
-                    <Image src = {twitterLogo} styleClass = "link-image"/>
+                    <a href = "https://www.linkedin.com/in/divyansh-thakur-929765167/">
+                        <Image src = {linkedInLogo} styleClass = "link-image"/>
+                    </a>
+                    <a href = "https://www.facebook.com/divyansh.thakur.5070/">
+                        <Image src = {facebookLogo} styleClass = "link-image"/>
+                    </a>
+                    <a href = "https://twitter.com/Divyans28185258">
+                        <Image src = {twitterLogo} styleClass = "link-image"/>
+                    </a>
+                    
                 </LinkContainer>
             </ReactCSSTransitionGroup>
         ): (
