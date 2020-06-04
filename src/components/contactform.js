@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Waypoint } from 'react-waypoint';
+import Form from '../Form';
 
 class ContactForm extends React.Component {
     constructor(props) {
@@ -21,13 +22,7 @@ class ContactForm extends React.Component {
         const { showAnimation: animationAllowed } = this.props;
         return !animationAllowed?
         (<div className = 'form-container'>
-            <form>
-                <input type = 'text' placeholder = 'Name' />
-                <input type = 'email' placeholder = 'Email' />
-                <input type = 'text' placeholder = 'Subject'  className = 'subject' />
-                <textarea placeholder = 'Message'/>
-                <button className = 'submit-button' type = 'submit'>Submit</button>
-            </form>
+            <Form />
         </div>)
         :this.state.showAnimation?(
             <ReactCSSTransitionGroup
@@ -38,13 +33,7 @@ class ContactForm extends React.Component {
             transitionLeave={false}
             >
             <div className = 'form-container'>
-                <form>
-                    <input type = 'text' placeholder = 'Name' />
-                    <input type = 'email' placeholder = 'Email' />
-                    <input type = 'text' placeholder = 'Subject'  className = 'subject' />
-                    <textarea placeholder = 'Message'/>
-                    <button className = 'submit-button' type = 'submit'>Submit</button>
-                </form>
+                <Form />
             </div>
             </ReactCSSTransitionGroup>
         ): (
@@ -59,13 +48,7 @@ class ContactForm extends React.Component {
                 />
 
                 <div className = 'form-container'>
-                    <form>
-                        <input type = 'text' placeholder = 'Name' />
-                        <input type = 'email' placeholder = 'Email' />
-                        <input type = 'text' placeholder = 'Subject'  className = 'subject' />
-                        <textarea placeholder = 'Message'/>
-                        <button className = 'submit-button' type = 'submit'>Submit</button>
-                    </form>
+                    <Form />
                 </div>
             </>
             
