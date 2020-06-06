@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { Waypoint } from 'react-waypoint';
-import Form from '../Form';
+import Form from './Form';
 
 class ContactForm extends React.Component {
     constructor(props) {

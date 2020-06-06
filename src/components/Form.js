@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CircularProgress from '@material-ui/core/CircularProgress';
 class Form extends React.Component {
 
     constructor(props) {
@@ -23,6 +23,9 @@ class Form extends React.Component {
 
     handleSubmit = ev => {
         ev.preventDefault();
+        this.setState({
+            status: 'PROGRESS'
+        })
         const form = ev.target;
         const data = new FormData(form);
         const xhr = new XMLHttpRequest();
@@ -57,17 +60,18 @@ class Form extends React.Component {
             <input type = 'email' placeholder = 'Email' name = 'email' onChange = {this.handleChange} value = {this.state.email}/>
             <input type = 'text' placeholder = 'Subject'  className = 'subject' name = 'subject' onChange = {this.handleChange} value = {this.state.subject}/>
             <textarea placeholder = 'Message' name = 'body' onChange = {this.handleChange} value = {this.state.body}/>
-            {this.state.status === 'SUCCESS'?
-                <>
-                    <p style = {{textAlign: 'center',fontSize: '18px', fontWeight: 'bold'}}>Thanks! I will contact you shortly :)</p>
-                    <button  className= 'square-button' onClick = {this.handleClick}>Send another message</button>
-                </>
-                :this.state.status === 'ERROR'?
-                <>
-                    <p style = {{textAlign: 'center',fontSize: '18px', fontWeight: 'bold'}}>Ooops! There was some error :(</p>
-                    <button  className= 'square-button' onClick = {this.handleClick}>Try Again</button>
-                </>
-                :<button className= 'square-button' type = 'submit'>Submit</button>
+            {this.state.status === 'PROGRESS'?<div style = {{textAlign: 'center'}}><CircularProgress /></div>
+            :this.state.status === 'SUCCESS'?
+            <>
+                <p style = {{textAlign: 'center',fontSize: '18px', fontWeight: 'bold'}}>Thanks! I will contact you shortly :)</p>
+                <button  className= 'square-button' onClick = {this.handleClick}>Send another message</button>
+            </>
+            :this.state.status === 'ERROR'?
+            <>
+                <p style = {{textAlign: 'center',fontSize: '18px', fontWeight: 'bold'}}>Ooops! There was some error :(</p>
+                <button  className= 'square-button' onClick = {this.handleClick}>Try Again</button>
+            </>
+            :<button className= 'square-button' type = 'submit'>Submit</button>
             }
         </form>
         )

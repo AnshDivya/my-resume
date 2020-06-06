@@ -95,7 +95,7 @@ return (
             <VerticalMenu handleScrollTo = {handleScrollTo} />:<>
             <Intro showAnimation = {state.showAnimation}/>
             <TextDescription />
-            <TimelineContainer showAnimation = {state.showAnimation} heading = "EDUCATION" changeView = {changeView} data = {expData}/>
+            <TimelineContainer showAnimation = {state.showAnimation} heading = "EXPERIENCE" changeView = {changeView} data = {expData}/>
             <TimelineContainer showAnimation = {state.showAnimation} heading = "EDUCATION"  changeView = {changeView} data = {eduData}/>
             <Skills showAnimation = {state.showAnimation} heading = "SKILLS" changeView = {changeView} />
             <Contact showAnimation = {state.showAnimation} heading = 'CONTACT' changeView = {changeView} />
