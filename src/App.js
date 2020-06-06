@@ -12,8 +12,8 @@ import Footer from './components/Footer';
   
 const expData = [
     {   id: 1,
-        years: "June-July 2019",
-        role: "Associate Software Developer",
+        years: "JUNE-JULY 2019",
+        role: "ASSOCIATE SOFTWARE DEVELOPER INTERN",
         org: "EXPEDIA GROUP",
         description: "Worked on the VOYAGER NEXT PLATFORM.The Task was to add an Agent to Agent Consult feature on the platform. Using this feature, an agent could consult to another agent while serving a customer. Technologies Used: JavaScript, ReactJS, CSS, Redux."
     }
