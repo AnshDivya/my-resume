@@ -31,14 +31,14 @@ const eduData = [
     {
         id: 1,
         years: "2014-2015",
-        role: "Class XII",
+        role: "CLASS XII",
         org: "GBSSS HASTSAL NEW DELHI",
         description: "Science Stream(PCM) 95.4%"
     },
     {
         id: 2,
         years: "2012-2013",
-        role: "Class X",
+        role: "CLASS X",
         org: "GBSSS HASTSAL NEW DELHI",
         description: "10.0 CGPA"
     }

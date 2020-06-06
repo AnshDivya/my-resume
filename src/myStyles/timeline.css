@@ -59,6 +59,7 @@ h2, h3, p{
 
 .movable-container {
     position: relative;
+    display: inline-block;
 }
 
 h2 {
