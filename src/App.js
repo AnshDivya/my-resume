@@ -8,6 +8,7 @@ import Contact from './components/contact';
 import VerticalMenu from './components/VerticalMenu';
 import {animateScroll as scroll } from 'react-scroll';
 import './App.css';
+//NOTHING NEW BRANCH TESTING 
 import Footer from './components/Footer';
   
 const expData = [
